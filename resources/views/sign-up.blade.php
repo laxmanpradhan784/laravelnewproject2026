@@ -10,7 +10,7 @@
         <div class="signin-header">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <a href="index-2.html" class="site-logo"><img src="assets/images/logo/logo.png" alt="logo"></a>
+                    <a href="{{ url('/') }}" class="site-logo"><img src="assets/images/logo/logo.png" alt="logo"></a>
                 </div>
                 <div class="col-md-6">
                     <div class="singin-header-btn">
@@ -33,7 +33,7 @@
                     <div class="axil-signin-form">
                         <h3 class="title">I'm New Here</h3>
                         <p class="b2 mb--55">Enter your detail below</p>
-                        {{-- <form class="signin-form" method="POST" action="{{ route('register.store') }}"> --}}
+                        <form class="signin-form" method="POST" action="{{ route('register.store') }}">
                             @csrf
 
                             <div class="form-group">
@@ -41,10 +41,10 @@
                                 <input type="text" class="form-control" name="name" placeholder="Enter full name" required>
                             </div>
 
-                            {{-- <div class="form-group">
+                            <div class="form-group">
                                 <label>Username</label>
                                 <input type="text" class="form-control" name="username" placeholder="Enter username" required>
-                            </div> --}}
+                            </div>
 
                             <div class="form-group">
                                 <label>Email</label>
@@ -60,11 +60,6 @@
                                 <label>Password</label>
                                 <input type="password" class="form-control" name="password" placeholder="Enter password" required>
                             </div>
-
-                            {{-- <div class="form-group">
-                                <label>Confirm Password</label>
-                                <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm password" required>
-                            </div> --}}
 
                             <div class="form-group">
                                 <button type="submit" class="axil-btn btn-bg-primary submit-btn">

@@ -41,9 +41,9 @@
                     <div class="col-sm-6">
                         <div class="header-top-link">
                             <ul class="quick-link">
-                                <li><a href="#">Help</a></li>
+                                <li><a href="{{ url('/contact') }}">Help</a></li>
                                <li><a href="{{ url('/sign-up') }}">Join Us</a></li>
-                               <li><a href="{{ url('/sign-in') }}">Join Us</a></li>
+                               <li><a href="{{ url('/sign-in') }}">Sign In</a></li>
                             </ul>
                         </div>
                     </div>
@@ -59,10 +59,10 @@
             <div class="container">
                 <div class="header-navbar">
                     <div class="header-brand">
-                        <a href="index-2.html" class="logo logo-dark">
+                        <a href="{{ url('/') }}" class="logo logo-dark">
                             <img src="assets/images/logo/logo.png" alt="Site Logo">
                         </a>
-                        <a href="index-2.html" class="logo logo-light">
+                        <a href="{{ url('/') }}" class="logo logo-light">
                             <img src="assets/images/logo/logo-light.png" alt="Site Logo">
                         </a>
                     </div>
@@ -76,33 +76,12 @@
                                 </a>
                             </div>
                             <ul class="mainmenu">
-                                <li class="menu-item-has-children">
-                                    <a href="#">Home</a>
-                                    <ul class="axil-submenu">
-                                        <li><a href="index-1.html">Home - Electronics</a></li>
-                                        <li><a href="index-3.html">Home - NFT</a></li>
-                                        <li><a href="index-4.html">Home - Fashion</a></li>
-                                        <li><a href="index-5.html">Home - Jewellery</a></li>
-                                        <li><a href="index-6.html">Home - Furniture</a></li>
-                                        <li><a href="index-7.html">Home - Multipurpose</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade-rtl/">RTL Version</a></li>
-                                    </ul>
+                                <li>
+                                    <a href="{{ url('/') }}">Home</a>
                                 </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Shop</a>
-                                    <ul class="axil-submenu">
-                                        <li><a href="shop-sidebar.html">Shop With Sidebar</a></li>
-                                        <li><a href="shop.html">Shop no Sidebar</a></li>
-                                        <li><a href="single-product.html">Product Variation 1</a></li>
-                                        <li><a href="single-product-2.html">Product Variation 2</a></li>
-                                        <li><a href="single-product-3.html">Product Variation 3</a></li>
-                                        <li><a href="single-product-4.html">Product Variation 4</a></li>
-                                        <li><a href="single-product-5.html">Product Variation 5</a></li>
-                                        <li><a href="single-product-6.html">Product Variation 6</a></li>
-                                        <li><a href="single-product-7.html">Product Variation 7</a></li>
-                                        <li><a href="single-product-8.html">Product Variation 8</a></li>
-                                    </ul>
-                                </li>
+                                <li>
+                                    <a href="{{ url('/shop') }}">Shop</a>
+                                {{-- </li>
                                 <li class="menu-item-has-children">
                                     <a href="#">Pages</a>
                                     <ul class="axil-submenu">
@@ -118,22 +97,18 @@
                                         <li><a href="coming-soon.html">Coming Soon</a></li>
                                         <li><a href="404.html">404 Error</a></li>
                                         <li><a href="typography.html">Typography</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about-us.html">About</a></li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Blog</a>
-                                    <ul class="axil-submenu">
-                                        <li><a href="blog.html">Blog List</a></li>
+                                    </ul>--}}
+                                </li> 
+                                <li><a href="{{ url('/about-us') }}">About</a></li>
+                                <li>
+                                    <a href=" {{ url('/blog-grid') }}">Blog</a>
+                                    {{-- <ul class="axil-submenu">
                                         <li><a href="blog-grid.html">Blog Grid</a></li>
-                                        <li><a href="blog-details.html">Standard Post</a></li>
-                                        <li><a href="blog-gallery.html">Gallery Post</a></li>
-                                        <li><a href="blog-video.html">Video Post</a></li>
-                                        <li><a href="blog-audio.html">Audio Post</a></li>
-                                        <li><a href="blog-quote.html">Quote Post</a></li>
-                                    </ul>
+                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                       
+                                    </ul> --}}
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{ url('/contact') }}">Contact</a></li>
                             </ul>
                         </nav>
                         <!-- End Mainmanu Nav -->
@@ -164,22 +139,19 @@
                                     <span class="title">QUICKLINKS</span>
                                     <ul>
                                         <li>
-                                            <a href="my-account.html">My Account</a>
+                                            <a href="{{ url('/my-account')}}">My Account</a>
                                         </li>
                                         <li>
                                             <a href="#">Initiate return</a>
                                         </li>
                                         <li>
-                                            <a href="#">Support</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Language</a>
+                                            <a href="{{ url('/contact')}}">Support</a>
                                         </li>
                                     </ul>
                                     <div class="login-btn">
-                                        <a href="sign-in.html" class="axil-btn btn-bg-primary">Login</a>
+                                        <a href="{{ url('/sign-in')}}" class="axil-btn btn-bg-primary">Login</a>
                                     </div>
-                                    <div class="reg-footer text-center">No account yet? <a href="sign-up.html" class="btn-link">REGISTER HERE.</a></div>
+                                    <div class="reg-footer text-center">No account yet? <a href="{{ url('/sign-up')}}" class="btn-link">REGISTER HERE.</a></div>
                                 </div>
                             </li>
                             <li class="axil-mobile-toggle">

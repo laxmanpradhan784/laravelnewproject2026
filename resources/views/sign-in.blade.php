@@ -9,7 +9,7 @@
         <div class="signin-header">
             <div class="row align-items-center">
                 <div class="col-sm-4">
-                    <a href="index-2.html" class="site-logo"><img src="assets/images/logo/logo.png" alt="logo"></a>
+                    <a href="{{ url('/') }}" class="site-logo"><img src="assets/images/logo/logo.png" alt="logo"></a>
                 </div>
                 <div class="col-sm-8">
                     <div class="singin-header-btn">
@@ -32,20 +32,25 @@
                     <div class="axil-signin-form">
                         <h3 class="title">Sign in to eTrade.</h3>
                         <p class="b2 mb--55">Enter your detail below</p>
-                        <form class="singin-form">
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input type="email" class="form-control" name="email" value="annie@example.com">
-                            </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" class="form-control" name="password" value="123456789">
-                            </div>
-                            <div class="form-group d-flex align-items-center justify-content-between">
-                                <button type="submit" class="axil-btn btn-bg-primary submit-btn">Sign In</button>
-                                <a href="forgot-password.html" class="forgot-btn">Forget password?</a>
-                            </div>
-                        </form>
+                       <form class="singin-form" method="POST" action="{{ route('login.store') }}">
+                        @csrf
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" name="email" placeholder="Enter email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" name="password" placeholder="Enter password" required>
+                        </div>
+
+                        <div class="form-group d-flex align-items-center justify-content-between">
+                            <button type="submit" class="axil-btn btn-bg-primary submit-btn">Sign In</button>
+                            <a href="forgot-password.html" class="forgot-btn">Forget password?</a>
+                        </div>
+                    </form>
+
                     </div>
                 </div>
             </div>

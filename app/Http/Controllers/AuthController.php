@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+
+
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -18,10 +21,10 @@ class AuthController extends Controller
     public function register(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'username' => 'required|unique:users',
-            'email' => 'required|email|unique:users',
-            'mobile' => 'required|unique:users',
+            'name' => 'required|string|max:255',
+            'username' => 'required',
+            'email' => 'required|email|unique:users,email',
+            'mobile' => 'required|digits:10',
             'password' => 'required|min:6',
         ]);
 
@@ -37,6 +40,7 @@ class AuthController extends Controller
             ->with('success', 'Account created successfully. Please login.');
     }
 
+
     // Show Login Page
     public function showLogin()
     {
@@ -46,12 +50,18 @@ class AuthController extends Controller
     // Handle Login (basic)
     public function login(Request $request)
     {
-        $request->validate([
+        $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
 
-        // login logic will go here later
-        return redirect()->route('home');
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->route('my-account')->with('success', 'Login successful');
+        }
+
+        return back()->withErrors([
+            'email' => 'Invalid email or password',
+        ])->withInput();
     }
 }

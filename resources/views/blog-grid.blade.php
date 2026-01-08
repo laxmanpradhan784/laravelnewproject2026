@@ -1,249 +1,10 @@
-<!doctype html>
-<html class="no-js" lang="en">
+@extends('layouts.app')
+
+@section('title', 'blog-grid')
+
+@section('content')
 
 
-<!-- Mirrored from new.axilthemes.com/demo/template/etrade/blog-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Jan 2026 12:13:44 GMT -->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>eTrade || Blog Grid</title>
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
-
-    <!-- CSS
-    ============================================ -->
-
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/font-awesome.css">
-    <link rel="stylesheet" href="assets/css/vendor/flaticon/flaticon.css">
-    <link rel="stylesheet" href="assets/css/vendor/slick.css">
-    <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
-    <link rel="stylesheet" href="assets/css/vendor/jquery-ui.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/sal.css">
-    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/vendor/base.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
-
-</head>
-
-
-<body class="sticky-header">
-    <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-<![endif]-->
-    <a href="#top" class="back-to-top" id="backto-top"><i class="fal fa-arrow-up"></i></a>
-    <!-- Start Header -->
-    <header class="header axil-header header-style-5">
-        <div class="axil-header-top">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-sm-6 col-12">
-                        <div class="header-top-dropdown">
-                            <div class="dropdown">
-                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    English
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">English</a></li>
-                                    <li><a class="dropdown-item" href="#">Arabic</a></li>
-                                    <li><a class="dropdown-item" href="#">Spanish</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown">
-                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    USD
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">USD</a></li>
-                                    <li><a class="dropdown-item" href="#">AUD</a></li>
-                                    <li><a class="dropdown-item" href="#">EUR</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-6 col-12">
-                        <div class="header-top-link">
-                            <ul class="quick-link">
-                                <li><a href="#">Help</a></li>
-                                <li><a href="sign-up.html">Join Us</a></li>
-                                <li><a href="sign-in.html">Sign In</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Start Mainmenu Area  -->
-        <div id="axil-sticky-placeholder"></div>
-        <div class="axil-mainmenu">
-            <div class="container">
-                <div class="header-navbar">
-                    <div class="header-brand">
-                        <a href="index-2.html" class="logo logo-dark">
-                            <img src="assets/images/logo/logo.png" alt="Site Logo">
-                        </a>
-                        <a href="index-2.html" class="logo logo-light">
-                            <img src="assets/images/logo/logo-light.png" alt="Site Logo">
-                        </a>
-                    </div>
-                    <div class="header-main-nav">
-                        <!-- Start Mainmanu Nav -->
-                        <nav class="mainmenu-nav">
-                            <button class="mobile-close-btn mobile-nav-toggler"><i class="fas fa-times"></i></button>
-                            <div class="mobile-nav-brand">
-                                <a href="index-2.html" class="logo">
-                                    <img src="assets/images/logo/logo.png" alt="Site Logo">
-                                </a>
-                            </div>
-                            <ul class="mainmenu">
-                                <li class="menu-item-has-children">
-                                    <a href="#">Home</a>
-                                    <ul class="axil-submenu">
-                                        <li><a href="index-1.html">Home - Electronics</a></li>
-                                        <li><a href="index-3.html">Home - NFT</a></li>
-                                        <li><a href="index-4.html">Home - Fashion</a></li>
-                                        <li><a href="index-5.html">Home - Jewellery</a></li>
-                                        <li><a href="index-6.html">Home - Furniture</a></li>
-                                        <li><a href="index-7.html">Home - Multipurpose</a></li>
-                                        <li><a href="https://new.axilthemes.com/demo/template/etrade-rtl/">RTL Version</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Shop</a>
-                                    <ul class="axil-submenu">
-                                        <li><a href="shop-sidebar.html">Shop With Sidebar</a></li>
-                                        <li><a href="shop.html">Shop no Sidebar</a></li>
-                                        <li><a href="single-product.html">Product Variation 1</a></li>
-                                        <li><a href="single-product-2.html">Product Variation 2</a></li>
-                                        <li><a href="single-product-3.html">Product Variation 3</a></li>
-                                        <li><a href="single-product-4.html">Product Variation 4</a></li>
-                                        <li><a href="single-product-5.html">Product Variation 5</a></li>
-                                        <li><a href="single-product-6.html">Product Variation 6</a></li>
-                                        <li><a href="single-product-7.html">Product Variation 7</a></li>
-                                        <li><a href="single-product-8.html">Product Variation 8</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Pages</a>
-                                    <ul class="axil-submenu">
-                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="my-account.html">Account</a></li>
-                                        <li><a href="sign-up.html">Sign Up</a></li>
-                                        <li><a href="sign-in.html">Sign In</a></li>
-                                        <li><a href="forgot-password.html">Forgot Password</a></li>
-                                        <li><a href="reset-password.html">Reset Password</a></li>
-                                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                        <li><a href="coming-soon.html">Coming Soon</a></li>
-                                        <li><a href="404.html">404 Error</a></li>
-                                        <li><a href="typography.html">Typography</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about-us.html">About</a></li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Blog</a>
-                                    <ul class="axil-submenu">
-                                        <li><a href="blog.html">Blog List</a></li>
-                                        <li><a href="blog-grid.html">Blog Grid</a></li>
-                                        <li><a href="blog-details.html">Standard Post</a></li>
-                                        <li><a href="blog-gallery.html">Gallery Post</a></li>
-                                        <li><a href="blog-video.html">Video Post</a></li>
-                                        <li><a href="blog-audio.html">Audio Post</a></li>
-                                        <li><a href="blog-quote.html">Quote Post</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <!-- End Mainmanu Nav -->
-                    </div>
-                    <div class="header-action">
-                        <ul class="action-list">
-                            <li class="axil-search d-xl-block d-none">
-                                <input type="search" class="placeholder product-search-input" name="search2" id="search2" value="" maxlength="128" placeholder="What are you looking for?" autocomplete="off">
-                                <button type="submit" class="icon wooc-btn-search">
-                                    <i class="flaticon-magnifying-glass"></i>
-                                </button>
-                            </li>
-                            <li class="axil-search d-xl-none d-block">
-                                <a href="javascript:void(0)" class="header-search-icon" title="Search">
-                                    <i class="flaticon-magnifying-glass"></i>
-                                </a>
-                            </li>
-                            <li class="wishlist">
-                                <a href="wishlist.html">
-                                    <i class="flaticon-heart"></i>
-                                </a>
-                            </li>
-                            <li class="shopping-cart">
-                                <a href="#" class="cart-dropdown-btn">
-                                    <span class="cart-count">3</span>
-                                    <i class="flaticon-shopping-cart"></i>
-                                </a>
-                            </li>
-                            <li class="my-account">
-                                <a href="javascript:void(0)">
-                                    <i class="flaticon-person"></i>
-                                </a>
-                                <div class="my-account-dropdown">
-                                    <span class="title">QUICKLINKS</span>
-                                    <ul>
-                                        <li>
-                                            <a href="my-account.html">My Account</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Initiate return</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Support</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Language</a>
-                                        </li>
-                                    </ul>
-                                    <a href="sign-in.html" class="axil-btn btn-bg-primary">Login</a>
-                                    <div class="reg-footer text-center">No account yet? <a href="sign-up.html" class="btn-link">REGISTER HERE.</a></div>
-                                </div>
-                            </li>
-                            <li class="axil-mobile-toggle">
-                                <button class="menu-btn mobile-nav-toggler">
-                                    <i class="flaticon-menu-2"></i>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Mainmenu Area -->
-        <div class="header-top-campaign">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-5 col-lg-6 col-md-10">
-                        <div class="header-campaign-activation axil-slick-arrow arrow-both-side header-campaign-arrow">
-                            <div class="slick-slide">
-                                <div class="campaign-content">
-                                    <p>STUDENT NOW GET 10% OFF : <a href="#">GET OFFER</a></p>
-                                </div>
-                            </div>
-                            <div class="slick-slide">
-                                <div class="campaign-content">
-                                    <p>STUDENT NOW GET 10% OFF : <a href="#">GET OFFER</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- End Header -->
     <main class="main-wrapper">
         <!-- Start Breadcrumb Area  -->
         <div class="axil-breadcrumb-area">
@@ -280,7 +41,7 @@
                                 <div class="content-blog blog-grid">
                                     <div class="inner">
                                         <div class="thumbnail">
-                                            <a href="blog-details.html">
+                                            <a href="{{ url('/blog-details') }}">
                                                 <img src="assets/images/blog/blog-10.png" alt="Blog Images">
                                             </a>
                                             <div class="blog-category">
@@ -288,10 +49,10 @@
                                             </div>
                                         </div>
                                         <div class="content">
-                                            <h5 class="title"><a href="blog-details.html">Keeping yourself safe when buying NFTs on eTrade</a></h5>
+                                            <h5 class="title"><a href="{{ url('/blog-details') }}">Keeping yourself safe when buying NFTs on eTrade</a></h5>
 
                                             <div class="read-more-btn">
-                                                <a class="axil-btn right-icon" href="blog-details.html">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                                <a class="axil-btn right-icon" href="{{ url('/blog-details') }}">Read More <i class="fal fa-long-arrow-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -301,7 +62,7 @@
                                 <div class="content-blog blog-grid">
                                     <div class="inner">
                                         <div class="thumbnail">
-                                            <a href="blog-details.html">
+                                            <a href="{{ url('/blog-details') }}">
                                                 <img src="assets/images/blog/blog-11.png" alt="Blog Images">
                                             </a>
                                             <div class="blog-category">
@@ -309,10 +70,10 @@
                                             </div>
                                         </div>
                                         <div class="content">
-                                            <h5 class="title"><a href="blog-details.html">Important updates for listing and delisting your NFTs</a></h5>
+                                            <h5 class="title"><a href="{{ url('/blog-details') }}">Important updates for listing and delisting your NFTs</a></h5>
 
                                             <div class="read-more-btn">
-                                                <a class="axil-btn right-icon" href="blog-details.html">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                                <a class="axil-btn right-icon" href="{{ url('/blog-details') }}">Read More <i class="fal fa-long-arrow-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -322,7 +83,7 @@
                                 <div class="content-blog blog-grid">
                                     <div class="inner">
                                         <div class="thumbnail">
-                                            <a href="blog-details.html">
+                                            <a href="{{ url('/blog-details') }}">
                                                 <img src="assets/images/blog/blog-12.png" alt="Blog Images">
                                             </a>
                                             <div class="blog-category">
@@ -330,10 +91,10 @@
                                             </div>
                                         </div>
                                         <div class="content">
-                                            <h5 class="title"><a href="blog-details.html">10 tips for avoiding scams and staying safe on the decentralized web</a></h5>
+                                            <h5 class="title"><a href="{{ url('/blog-details') }}">10 tips for avoiding scams and staying safe on the decentralized web</a></h5>
 
                                             <div class="read-more-btn">
-                                                <a class="axil-btn right-icon" href="blog-details.html">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                                <a class="axil-btn right-icon" href="{{ url('/blog-details') }}">Read More <i class="fal fa-long-arrow-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -343,7 +104,7 @@
                                 <div class="content-blog blog-grid">
                                     <div class="inner">
                                         <div class="thumbnail">
-                                            <a href="blog-details.html">
+                                            <a href="{{ url('/blog-details') }}">
                                                 <img src="assets/images/blog/blog-10.png" alt="Blog Images">
                                             </a>
                                             <div class="blog-category">
@@ -351,10 +112,10 @@
                                             </div>
                                         </div>
                                         <div class="content">
-                                            <h5 class="title"><a href="blog-details.html">Keeping yourself safe when buying NFTs on eTrade</a></h5>
+                                            <h5 class="title"><a href="{{ url('/blog-details') }}">Keeping yourself safe when buying NFTs on eTrade</a></h5>
 
                                             <div class="read-more-btn">
-                                                <a class="axil-btn right-icon" href="blog-details.html">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                                <a class="axil-btn right-icon" href="{{ url('/blog-details') }}">Read More <i class="fal fa-long-arrow-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -364,7 +125,7 @@
                                 <div class="content-blog blog-grid">
                                     <div class="inner">
                                         <div class="thumbnail">
-                                            <a href="blog-details.html">
+                                            <a href="{{ url('/blog-details') }}">
                                                 <img src="assets/images/blog/blog-11.png" alt="Blog Images">
                                             </a>
                                             <div class="blog-category">
@@ -372,10 +133,10 @@
                                             </div>
                                         </div>
                                         <div class="content">
-                                            <h5 class="title"><a href="blog-details.html">Important updates for listing and delisting your NFTs</a></h5>
+                                            <h5 class="title"><a href="{{ url('/blog-details') }}">Important updates for listing and delisting your NFTs</a></h5>
 
                                             <div class="read-more-btn">
-                                                <a class="axil-btn right-icon" href="blog-details.html">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                                <a class="axil-btn right-icon" href="{{ url('/blog-details') }}">Read More <i class="fal fa-long-arrow-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -385,7 +146,7 @@
                                 <div class="content-blog blog-grid">
                                     <div class="inner">
                                         <div class="thumbnail">
-                                            <a href="blog-details.html">
+                                            <a href="{{ url('/blog-details') }}">
                                                 <img src="assets/images/blog/blog-12.png" alt="Blog Images">
                                             </a>
                                             <div class="blog-category">
@@ -393,10 +154,10 @@
                                             </div>
                                         </div>
                                         <div class="content">
-                                            <h5 class="title"><a href="blog-details.html">10 tips for avoiding scams and staying safe on the decentralized web</a></h5>
+                                            <h5 class="title"><a href="{{ url('/blog-details') }}">10 tips for avoiding scams and staying safe on the decentralized web</a></h5>
 
                                             <div class="read-more-btn">
-                                                <a class="axil-btn right-icon" href="blog-details.html">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                                <a class="axil-btn right-icon" href="{{ url('/blog-details') }}">Read More <i class="fal fa-long-arrow-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -406,7 +167,7 @@
                                 <div class="content-blog blog-grid">
                                     <div class="inner">
                                         <div class="thumbnail">
-                                            <a href="blog-details.html">
+                                            <a href="{{ url('/blog-details') }}">
                                                 <img src="assets/images/blog/blog-10.png" alt="Blog Images">
                                             </a>
                                             <div class="blog-category">
@@ -414,10 +175,10 @@
                                             </div>
                                         </div>
                                         <div class="content">
-                                            <h5 class="title"><a href="blog-details.html">Keeping yourself safe when buying NFTs on eTrade</a></h5>
+                                            <h5 class="title"><a href="{{ url('/blog-details') }}">Keeping yourself safe when buying NFTs on eTrade</a></h5>
 
                                             <div class="read-more-btn">
-                                                <a class="axil-btn right-icon" href="blog-details.html">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                                <a class="axil-btn right-icon" href="{{ url('/blog-details') }}">Read More <i class="fal fa-long-arrow-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -427,7 +188,7 @@
                                 <div class="content-blog blog-grid">
                                     <div class="inner">
                                         <div class="thumbnail">
-                                            <a href="blog-details.html">
+                                            <a href="{{ url('/blog-details') }}">
                                                 <img src="assets/images/blog/blog-11.png" alt="Blog Images">
                                             </a>
                                             <div class="blog-category">
@@ -435,10 +196,10 @@
                                             </div>
                                         </div>
                                         <div class="content">
-                                            <h5 class="title"><a href="blog-details.html">Important updates for listing and delisting your NFTs</a></h5>
+                                            <h5 class="title"><a href="{{ url('/blog-details') }}">Important updates for listing and delisting your NFTs</a></h5>
 
                                             <div class="read-more-btn">
-                                                <a class="axil-btn right-icon" href="blog-details.html">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                                <a class="axil-btn right-icon" href="{{ url('/blog-details') }}">Read More <i class="fal fa-long-arrow-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -448,7 +209,7 @@
                                 <div class="content-blog blog-grid">
                                     <div class="inner">
                                         <div class="thumbnail">
-                                            <a href="blog-details.html">
+                                            <a href="{{ url('/blog-details') }}">
                                                 <img src="assets/images/blog/blog-10.png" alt="Blog Images">
                                             </a>
                                             <div class="blog-category">
@@ -456,10 +217,10 @@
                                             </div>
                                         </div>
                                         <div class="content">
-                                            <h5 class="title"><a href="blog-details.html">Keeping yourself safe when buying NFTs on eTrade</a></h5>
+                                            <h5 class="title"><a href="{{ url('/blog-details') }}">Keeping yourself safe when buying NFTs on eTrade</a></h5>
 
                                             <div class="read-more-btn">
-                                                <a class="axil-btn right-icon" href="blog-details.html">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                                <a class="axil-btn right-icon" href="{{ url('/blog-details') }}">Read More <i class="fal fa-long-arrow-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -469,7 +230,7 @@
                                 <div class="content-blog blog-grid">
                                     <div class="inner">
                                         <div class="thumbnail">
-                                            <a href="blog-details.html">
+                                            <a href="{{ url('/blog-details') }}">
                                                 <img src="assets/images/blog/blog-11.png" alt="Blog Images">
                                             </a>
                                             <div class="blog-category">
@@ -477,10 +238,10 @@
                                             </div>
                                         </div>
                                         <div class="content">
-                                            <h5 class="title"><a href="blog-details.html">Important updates for listing and delisting your NFTs</a></h5>
+                                            <h5 class="title"><a href="{{ url('/blog-details') }}">Important updates for listing and delisting your NFTs</a></h5>
 
                                             <div class="read-more-btn">
-                                                <a class="axil-btn right-icon" href="blog-details.html">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                                <a class="axil-btn right-icon" href="{{ url('/blog-details') }}">Read More <i class="fal fa-long-arrow-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -768,130 +529,7 @@
             </div>
         </div>
     </div>
-    <!-- Start Footer Area  -->
-    <footer class="axil-footer-area footer-style-2">
-        <!-- Start Footer Top Area  -->
-        <div class="footer-top separator-top">
-            <div class="container">
-                <div class="row">
-                    <!-- Start Single Widget  -->
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="axil-footer-widget">
-                            <h5 class="widget-title">Support</h5>
-                            <!-- <div class="logo mb--30">
-                            <a href="index.html">
-                                <img class="light-logo" src="assets/images/logo/logo.png" alt="Logo Images">
-                            </a>
-                        </div> -->
-                            <div class="inner">
-                                <p>685 Market Street, <br>
-                                Las Vegas, LA 95820, <br>
-                                United States.
-                                </p>
-                                <ul class="support-list-item">
-                                    <li><a href="mailto:example@domain.com"><i class="fal fa-envelope-open"></i> example@domain.com</a></li>
-                                    <li><a href="tel:(+01)850-315-5862"><i class="fal fa-phone-alt"></i> (+01) 850-315-5862</a></li>
-                                    <!-- <li><i class="fal fa-map-marker-alt"></i> 685 Market Street,  <br> Las Vegas, LA 95820, <br> United States.</li> -->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Widget  -->
-                    <!-- Start Single Widget  -->
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="axil-footer-widget">
-                            <h5 class="widget-title">Account</h5>
-                            <div class="inner">
-                                <ul>
-                                    <li><a href="my-account.html">My Account</a></li>
-                                    <li><a href="sign-up.html">Login / Register</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                    <li><a href="shop.html">Shop</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Widget  -->
-                    <!-- Start Single Widget  -->
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="axil-footer-widget">
-                            <h5 class="widget-title">Quick Link</h5>
-                            <div class="inner">
-                                <ul>
-                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                    <li><a href="terms-of-service.html">Terms Of Use</a></li>
-                                    <li><a href="#">FAQ</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Widget  -->
-                    <!-- Start Single Widget  -->
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="axil-footer-widget">
-                            <h5 class="widget-title">Download App</h5>
-                            <div class="inner">
-                                <span>Save $3 With App & New User only</span>
-                                <div class="download-btn-group">
-                                    <div class="qr-code">
-                                        <img src="assets/images/others/qr.png" alt="Axilthemes">
-                                    </div>
-                                    <div class="app-link">
-                                        <a href="#">
-                                            <img src="assets/images/others/app-store.png" alt="App Store">
-                                        </a>
-                                        <a href="#">
-                                            <img src="assets/images/others/play-store.png" alt="Play Store">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Widget  -->
-                </div>
-            </div>
-        </div>
-        <!-- End Footer Top Area  -->
-        <!-- Start Copyright Area  -->
-        <div class="copyright-area copyright-default separator-top">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-4">
-                        <div class="social-share">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-discord"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-12">
-                        <div class="copyright-left d-flex flex-wrap justify-content-center">
-                            <ul class="quick-link">
-                                <li>© 2025. All rights reserved by <a target="_blank" href="https://axilthemes.com/">Axilthemes</a>.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-12">
-                        <div class="copyright-right d-flex flex-wrap justify-content-xl-end justify-content-center align-items-center">
-                            <span class="card-text">Accept For</span>
-                            <ul class="payment-icons-bottom quick-link">
-                                <li><img src="assets/images/icons/cart/cart-1.png" alt="paypal cart"></li>
-                                <li><img src="assets/images/icons/cart/cart-2.png" alt="paypal cart"></li>
-                                <li><img src="assets/images/icons/cart/cart-5.png" alt="paypal cart"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Copyright Area  -->
-    </footer>
-    <!-- End Footer Area  -->
+    
 
     <!-- Product Quick View Modal Start -->
     <div class="modal fade quick-view-product" id="quick-view-modal" tabindex="-1" aria-hidden="true">
@@ -1209,32 +847,4 @@
         </div>
     </div>
 
-    <!-- JS
-============================================ -->
-    <!-- Modernizer JS -->
-    <script src="assets/js/vendor/modernizr.min.js"></script>
-    <!-- jQuery JS -->
-    <script src="assets/js/vendor/jquery.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="assets/js/vendor/popper.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/vendor/slick.min.js"></script>
-    <script src="assets/js/vendor/js.cookie.js"></script>
-    <!-- <script src="assets/js/vendor/jquery.style.switcher.js"></script> -->
-    <script src="assets/js/vendor/jquery-ui.min.js"></script>
-    <script src="assets/js/vendor/jquery.ui.touch-punch.min.js"></script>
-    <script src="assets/js/vendor/jquery.countdown.min.js"></script>
-    <script src="assets/js/vendor/sal.js"></script>
-    <script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
-    <script src="assets/js/vendor/counterup.js"></script>
-    <script src="assets/js/vendor/waypoints.min.js"></script>
-
-    <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
-</body>
-
-
-<!-- Mirrored from new.axilthemes.com/demo/template/etrade/blog-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Jan 2026 12:13:44 GMT -->
-</html>
+    @endsection
