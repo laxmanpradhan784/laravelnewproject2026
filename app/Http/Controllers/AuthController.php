@@ -64,4 +64,15 @@ class AuthController extends Controller
             'email' => 'Invalid email or password',
         ])->withInput();
     }
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        // ✅ Redirect to sign-in page
+        return redirect()->route('login')
+            ->with('success', 'You have been logged out');
+    }
 }

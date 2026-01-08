@@ -41,7 +41,10 @@
                                 <img src="assets/images/product/author1.png" alt="Hello Annie">
                             </div>
                             <div class="media-body">
-                                <h5 class="title mb-0">Hello Annie</h5>
+                                @auth
+                                <h5 class="title mb-0">Hello {{ auth()->user()->name }}</h5>
+                                @endauth
+
                                 <span class="joining-date">eTrade Member Since Sep 2020</span>
                             </div>
                         </div>
@@ -56,7 +59,15 @@
                                         <a class="nav-item nav-link" data-bs-toggle="tab" href="#nav-downloads" role="tab" aria-selected="false"><i class="fas fa-file-download"></i>Downloads</a>
                                         <a class="nav-item nav-link" data-bs-toggle="tab" href="#nav-address" role="tab" aria-selected="false"><i class="fas fa-home"></i>Addresses</a>
                                         <a class="nav-item nav-link" data-bs-toggle="tab" href="#nav-account" role="tab" aria-selected="false"><i class="fas fa-user"></i>Account Details</a>
-                                        <a class="nav-item nav-link" href="sign-in.html"><i class="fal fa-sign-out"></i>Logout</a>
+                                        <a class="nav-item nav-link" href="#"
+                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                <i class="fal fa-sign-out"></i> Logout
+                                            </a>
+
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+
                                     </div>
                                 </nav>
                             </aside>
@@ -65,7 +76,19 @@
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="nav-dashboard" role="tabpanel">
                                     <div class="axil-dashboard-overview">
-                                        <div class="welcome-text">Hello Annie (not <span>Annie?</span> <a href="sign-in.html">Log Out</a>)</div>
+                                        <div class="welcome-text">
+                                            Hello {{ auth()->user()->name }}
+                                            (not <span>{{ auth()->user()->name }}?</span>
+                                            <a href="#"
+                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                Log Out
+                                            </a>)
+                                        </div>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none;">
+                                            @csrf
+                                        </form>
+
                                         <p>From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details.</p>
                                     </div>
                                 </div>
