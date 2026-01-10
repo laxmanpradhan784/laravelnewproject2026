@@ -1,87 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- Mirrored from codervent.com/syndash/demo/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Jan 2026 05:03:39 GMT -->
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<title> Syndash </title>
-	<!-- favicon -->
-	<link rel="icon" href="{{ asset('admin/assets/images/favicon-32x32.png') }}" type="image/png" />
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Vector CSS -->
-	<link rel="stylesheet" href="{{ asset('admin/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" />
+    <title>Syndash | Admin</title>
 
-	<!-- Plugins -->
-	<link rel="stylesheet" href="{{ asset('admin/assets/plugins/simplebar/css/simplebar.css') }}" />
-	<link rel="stylesheet" href="{{ asset('admin/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" />
-	<link rel="stylesheet" href="{{ asset('admin/assets/plugins/metismenu/css/metisMenu.min.css') }}" />
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('admin/assets/images/favicon-32x32.png') }}" type="image/png">
 
-	<!-- Loader -->
-	<link rel="stylesheet" href="{{ asset('admin/assets/css/pace.min.css') }}" />
-	<script src="{{ asset('admin/js/pace.min.js') }}"></script>
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{{ asset('admin/assets/plugins/simplebar/css/simplebar.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/assets/plugins/metismenu/css/metisMenu.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}">
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="{{ asset('admin/assets/css/bootstrap.min.css') }}" />
+    <!-- Loader -->
+    <link rel="stylesheet" href="{{ asset('admin/assets/css/pace.min.css') }}">
+    <script src="{{ asset('admin/assets/js/pace.min.js') }}"></script>
 
-	<!-- Google Fonts (keep CDN as-is) -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto&display=swap" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('admin/assets/css/bootstrap.min.css') }}">
 
-	<!-- Icons CSS -->
-	<link rel="stylesheet" href="{{ asset('admin/assets/css/icons.css') }}" />
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto&display=swap">
 
-	<!-- App CSS -->
-	<link rel="stylesheet" href="{{ asset('admin/assets/css/app.css') }}" />
-	<link rel="stylesheet" href="{{ asset('admin/assets/css/dark-sidebar.css') }}" />
-	<link rel="stylesheet" href="{{ asset('admin/assets/css/dark-theme.css') }}" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="{{ asset('admin/assets/css/icons.css') }}">
 
+    <!-- App CSS -->
+    <link rel="stylesheet" href="{{ asset('admin/assets/css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/assets/css/dark-sidebar.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/assets/css/dark-theme.css') }}">
 </head>
 
 <body>
+
+<div class="wrapper">
 
         <div class="container">
             @yield('content')
         </div>
 
 
-<!-- JavaScript -->
-	
-	<!-- Bootstrap JS -->
-	<script src="{{ asset('admin/assets/js/bootstrap.bundle.min.js') }}"></script>
+<!-- ===================== -->
+<!-- JavaScript (ORDER MATTERS) -->
+<!-- ===================== -->
 
-	<!-- jQuery -->
-	<script src="{{ asset('admin/assets/js/jquery.min.js') }}"></script>
+<!-- jQuery FIRST -->
+<script src="{{ asset('admin/assets/js/jquery.min.js') }}"></script>
 
-	<!-- Plugins -->
-	<script src="{{ asset('admin/assets/plugins/simplebar/js/simplebar.min.js') }}"></script>
-	<script src="{{ asset('admin/assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
-	<script src="{{ asset('admin/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
+<!-- Bootstrap Bundle (includes Popper) -->
+<script src="{{ asset('admin/assets/js/bootstrap.bundle.min.js') }}"></script>
 
-	<!-- Vector map JavaScript -->
-	<script src="{{ asset('admin/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js') }}"></script>
-	<script src="{{ asset('admin/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
-	<script src="{{ asset('admin/assets/plugins/vectormap/jquery-jvectormap-in-mill.js') }}"></script>
-	<script src="{{ asset('admin/assets/plugins/vectormap/jquery-jvectormap-us-aea-en.js') }}"></script>
-	<script src="{{ asset('admin/assets/plugins/vectormap/jquery-jvectormap-uk-mill-en.js') }}"></script>
-	<script src="{{ asset('admin/assets/plugins/vectormap/jquery-jvectormap-au-mill.js') }}"></script>
+<!-- Plugins -->
+<script src="{{ asset('admin/assets/plugins/simplebar/js/simplebar.min.js') }}"></script>
+<script src="{{ asset('admin/assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
+<script src="{{ asset('admin/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
 
-	<!-- ApexCharts -->
-	<script src="{{ asset('admin/assets/plugins/apexcharts-bundle/js/apexcharts.min.js') }}"></script>
+<!-- Vector Maps -->
+<script src="{{ asset('admin/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js') }}"></script>
+<script src="{{ asset('admin/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
 
-	<!-- Page JS -->
-	<script src="{{ asset('admin/assets/js/index.js') }}"></script>
+<!-- Charts -->
+<script src="{{ asset('admin/assets/plugins/apexcharts-bundle/js/apexcharts.min.js') }}"></script>
 
-	<!-- App JS -->
-	<script src="{{ asset('admin/assets/js/app.js') }}"></script>
+<!-- App JS -->
+<script src="{{ asset('admin/assets/js/app.js') }}"></script>
 
-	<script>
-		new PerfectScrollbar('.dashboard-social-list');
-		new PerfectScrollbar('.dashboard-top-countries');
-	</script>
+@stack('scripts')
+
 </body>
-
-<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl509132'},{'dcenter':'p3'},{'cp_id':'10399385'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../../img1.wsimg.com/signals/js/clients/scc-c2/scc-c2.min.js'></script>
-<!-- Mirrored from codervent.com/syndash/demo/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Jan 2026 05:04:11 GMT -->
 </html>

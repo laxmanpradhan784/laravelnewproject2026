@@ -1,4 +1,4 @@
-<!-- wrapper -->
+	<!-- wrapper -->
 	<div class="wrapper">
 		<!--sidebar-wrapper-->
 		<div class="sidebar-wrapper" data-simplebar="true">
@@ -331,8 +331,7 @@
 			<!--end navigation-->
 		</div>
 		<!--end sidebar-wrapper-->
-
-        <!--header-->
+		<!--header-->
 		<header class="top-header">
 			<nav class="navbar navbar-expand">
 				<div class="left-topbar d-flex align-items-center">
@@ -630,25 +629,47 @@
 								</div>
 							</a>
 							<div class="dropdown-menu dropdown-menu-end">	
-								<a class="dropdown-item" href="javascript:;"><i
-										class="bx bx-user"></i><span>Profile</span></a>
-								<a class="dropdown-item" href="javascript:;"><i
-										class="bx bx-cog"></i><span>Settings</span></a>
-								<a class="dropdown-item" href="javascript:;"><i
-										class="bx bx-tachometer"></i><span>Dashboard</span></a>
-								<a class="dropdown-item" href="javascript:;"><i
-										class="bx bx-wallet"></i><span>Earnings</span></a>
-								<a class="dropdown-item" href="javascript:;"><i
-										class="bx bx-cloud-download"></i><span>Downloads</span></a>
-								<div class="dropdown-divider mb-0"></div>	<a class="dropdown-item" href="#"
-								onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-									<i class="bx bx-power-off"></i>
-									<span>Logout</span>
-								</a>
+								<a class="dropdown-item" href="{{ route('admin.profile') }}">
+								<i class="bx bx-user"></i>
+								<span>Profile</span>
+							</a>
 
-								<form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
-									@csrf
-								</form>
+							<a class="dropdown-item" href="{{ route('admin.settings') }}">
+								<i class="bx bx-cog"></i>
+								<span>Settings</span>
+							</a>
+
+							<a class="dropdown-item" href="{{ route('admin.dashboard') }}">
+								<i class="bx bx-tachometer"></i>
+								<span>Dashboard</span>
+							</a>
+
+							<a class="dropdown-item" href="{{ route('admin.earnings') }}">
+								<i class="bx bx-wallet"></i>
+								<span>Earnings</span>
+							</a>
+
+							<a class="dropdown-item" href="{{ route('admin.downloads') }}">
+								<i class="bx bx-cloud-download"></i>
+								<span>Downloads</span>
+							</a>
+
+							<div class="dropdown-divider mb-0"></div>
+
+
+									<a class="dropdown-item" href="#"
+									onclick="event.preventDefault(); document.getElementById('admin-logout-form').submit();">
+										<i class="bx bx-power-off"></i>
+										<span>Logout</span>
+									</a>
+
+									<form id="admin-logout-form"
+										action="{{ route('admin.logout') }}"
+										method="POST"
+										class="d-none">
+										@csrf
+									</form>
+
 							</div>
 						</li>
 						<li class="nav-item dropdown dropdown-language">
