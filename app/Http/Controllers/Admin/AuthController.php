@@ -10,55 +10,47 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    /* =========================
-       SHOW LOGIN FORM
-    ========================= */
+    // ✅ SHOW LOGIN PAGE
     public function showLogin()
     {
         return view('admin.login');
     }
 
-    /* =========================
-       LOGIN ADMIN
-    ========================= */
+    // ✅ HANDLE LOGIN
     public function login(Request $request)
     {
-        $request->validate([
+        $credentials = $request->validate([
             'email' => 'required|email',
-            'password' => 'required'
+            'password' => 'required',
         ]);
 
-        if (Auth::guard('admin')->attempt($request->only('email', 'password'))) {
+        if (Auth::guard('admin')->attempt($credentials)) {
+            $request->session()->regenerate();
             return redirect()->route('admin.dashboard');
         }
 
-        return back()->with('error', 'Invalid admin credentials');
+        return back()->withErrors([
+            'email' => 'Invalid credentials',
+        ]);
     }
 
-    /* =========================
-       SHOW REGISTER FORM
-       (OPTIONAL – usually hidden)
-    ========================= */
+    // ✅ SHOW REGISTER PAGE
     public function showRegister()
     {
         return view('admin.register');
     }
 
-    /* =========================
-       REGISTER ADMIN
-    ========================= */
+    // ✅ HANDLE REGISTER
     public function register(Request $request)
     {
         $request->validate([
             'name' => 'required',
-            'username' => 'required|unique:admins',
             'email' => 'required|email|unique:admins',
             'password' => 'required|min:6',
         ]);
 
         $admin = Admin::create([
             'name' => $request->name,
-            'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
@@ -68,12 +60,13 @@ class AuthController extends Controller
         return redirect()->route('admin.dashboard');
     }
 
-    /* =========================
-       LOGOUT
-    ========================= */
-    public function logout()
+    // ✅ LOGOUT
+    public function logout(Request $request)
     {
         Auth::guard('admin')->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
         return redirect()->route('admin.login');
     }
 }

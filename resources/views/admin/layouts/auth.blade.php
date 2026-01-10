@@ -7,7 +7,7 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<title>Syndash - Bootstrap4 Admin Template</title>
+	<title> Syndash </title>
 	<!-- favicon -->
 	<link rel="icon" href="{{ asset('admin/images/favicon-32x32.png') }}" type="image/png" />
 
@@ -41,16 +41,9 @@
 
 <body>
 
-
-
-@include('adminside.partials.navbar')
-
-<div class="container">
-    @yield('content')
-</div>
-
-@include('adminside.partials.footer')
-
+        <div class="container">
+            @yield('content')
+        </div>
 
 
 <!-- JavaScript -->

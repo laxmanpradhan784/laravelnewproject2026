@@ -1,4 +1,4 @@
-@extends('layouts.auth')
+@extends('admin.layouts.auth')
 
 @section('title','login')
 
@@ -29,7 +29,8 @@
 											<hr>
 										</div>
 										<div class="form-body">
-											<form class="row g-3">
+											<form method="POST" action="{{ route('admin.login.store') }}" class="row g-3">
+  													  @csrf
 												<div class="col-12">
 													<label for="inputEmailAddress" class="form-label">Email Address</label>
 													<input type="email" class="form-control" id="inputEmailAddress" placeholder="Email Address">
