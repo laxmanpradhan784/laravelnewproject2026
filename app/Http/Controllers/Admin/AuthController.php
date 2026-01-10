@@ -10,17 +10,55 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    // ✅ SHOW LOGIN PAGE
+    /* =========================
+       SHOW LOGIN PAGE
+    ========================= */
     public function showLogin()
     {
         return view('admin.login');
     }
 
-    // ✅ HANDLE LOGIN
+    /* =========================
+       SHOW REGISTER PAGE
+    ========================= */
+    public function showRegister()
+    {
+        return view('admin.register');
+    }
+
+    /* =========================
+       HANDLE REGISTER
+       → REDIRECT TO LOGIN
+    ========================= */
+    public function register(Request $request)
+    {
+        $request->validate([
+            'first_name' => 'required|string|max:255',
+            'username'   => 'required|string|max:255|unique:admins,username',
+            'email'      => 'required|email|unique:admins,email',
+            'password'   => 'required|min:6',
+        ]);
+
+        Admin::create([
+            'name'     => $request->first_name,
+            'username' => $request->username,
+            'email'    => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        // ✅ DO NOT AUTO-LOGIN
+        return redirect()
+            ->route('admin.login')
+            ->with('success', 'Admin account created successfully. Please login.');
+    }
+
+    /* =========================
+       HANDLE LOGIN
+    ========================= */
     public function login(Request $request)
     {
         $credentials = $request->validate([
-            'email' => 'required|email',
+            'email'    => 'required|email',
             'password' => 'required',
         ]);
 
@@ -30,37 +68,13 @@ class AuthController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'Invalid credentials',
-        ]);
+            'email' => 'Invalid email or password',
+        ])->withInput();
     }
 
-    // ✅ SHOW REGISTER PAGE
-    public function showRegister()
-    {
-        return view('admin.register');
-    }
-
-    // ✅ HANDLE REGISTER
-    public function register(Request $request)
-    {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:admins',
-            'password' => 'required|min:6',
-        ]);
-
-        $admin = Admin::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
-
-        Auth::guard('admin')->login($admin);
-
-        return redirect()->route('admin.dashboard');
-    }
-
-    // ✅ LOGOUT
+    /* =========================
+       LOGOUT
+    ========================= */
     public function logout(Request $request)
     {
         Auth::guard('admin')->logout();

@@ -4,17 +4,18 @@
 
 @section('content')
 
- {{-- main-wrapper started here --}}
+    <div class="axil-signin-area">
+
         <!-- Start Header -->
         <div class="signin-header">
             <div class="row align-items-center">
                 <div class="col-sm-4">
-                    <a href="{{ url('/') }}" class="site-logo"><img src="assets/images/logo/logo.png" alt="logo"></a>
+                    <a href="{{ url('/')}}" class="site-logo"><img src="assets/images/logo/logo.png" alt="logo"></a>
                 </div>
                 <div class="col-sm-8">
                     <div class="singin-header-btn">
                         <p>Not a member?</p>
-                        <a href="{{ url('/sign-up') }}" class="axil-btn btn-bg-secondary sign-up-btn">Sign Up Now</a>
+                        <a href="{{ url('/sign-up')}}" class="axil-btn btn-bg-secondary sign-up-btn">Sign Up Now</a>
                     </div>
                 </div>
             </div>

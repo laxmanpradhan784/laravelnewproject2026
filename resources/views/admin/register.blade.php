@@ -29,46 +29,72 @@
 											<hr>
 										</div>
 										<div class="form-body">
-											<form class="row g-3">
+											<form method="POST" action="{{ route('admin.register.store') }}" class="row g-3">
+												@csrf
+
 												<div class="col-sm-6">
-													<label for="inputFirstName" class="form-label">First Name</label>
-													<input type="email" class="form-control" id="inputFirstName" placeholder="Jhon">
+													<label class="form-label">First Name</label>
+													<input type="text" name="first_name" class="form-control" placeholder="Type Your Full Name" required>
 												</div>
+
 												<div class="col-sm-6">
-													<label for="inputLastName" class="form-label">Last Name</label>
-													<input type="email" class="form-control" id="inputLastName" placeholder="Deo">
+													<label class="form-label">User Name</label>
+													<input type="text" name="username" class="form-control" placeholder="Type Your Username" required>
 												</div>
+
+												{{-- <div class="col-sm-6">
+													<label class="form-label">Last Name</label>
+													<input type="text" name="last_name" class="form-control" placeholder="Doe" required>
+												</div> --}}
+
 												<div class="col-12">
-													<label for="inputEmailAddress" class="form-label">Email Address</label>
-													<input type="email" class="form-control" id="inputEmailAddress" placeholder="example@user.com">
+													<label class="form-label">Email Address</label>
+													<input type="email" name="email" class="form-control" placeholder="example@admin.com" required>
 												</div>
+
 												<div class="col-12">
-													<label for="inputChoosePassword" class="form-label">Password</label>
+													<label class="form-label">Password</label>
 													<div class="input-group" id="show_hide_password">
-														<input type="password" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class="bx bx-hide"></i></a>
+														<input type="password" name="password" class="form-control border-end-0" placeholder="Enter Password" required>
+														<a href="javascript:;" class="input-group-text bg-transparent">
+															<i class="bx bx-hide"></i>
+														</a>
 													</div>
 												</div>
-												<div class="col-12">
-													<label for="inputSelectCountry" class="form-label">Country</label>
-													<select class="form-select" id="inputSelectCountry" aria-label="Default select example">
-														<option selected="">India</option>
-														<option value="1">United Kingdom</option>
-														<option value="2">America</option>
-														<option value="3">Dubai</option>
+
+												{{-- <div class="col-12">
+													<label class="form-label">Country</label>
+													<select name="country" class="form-select">
+														<option value="India" selected>India</option>
+														<option value="United Kingdom">United Kingdom</option>
+														<option value="America">America</option>
+														<option value="Dubai">Dubai</option>
 													</select>
-												</div>
-												<div class="col-12">
+												</div> --}}
+
+												{{-- <div class="col-12">
 													<div class="form-check form-switch">
-														<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
-														<label class="form-check-label" for="flexSwitchCheckChecked">I read and agree to Terms &amp; Conditions</label>
+														<input class="form-check-input" type="checkbox" required>
+														<label class="form-check-label">
+															I read and agree to Terms & Conditions
+														</label>
 													</div>
-												</div>
+												</div> --}}
+
 												<div class="col-12">
 													<div class="d-grid">
-														<button type="submit" class="btn btn-primary"><i class="bx bx-user me-1"></i>Sign up</button>
+														<button type="submit" class="btn btn-primary">
+															<i class="bx bx-user me-1"></i> Sign up
+														</button>
 													</div>
 												</div>
+												<div class="col-12 text-center">
+													<p>Already have an account ?
+														<a href="{{ route('admin.login') }}">Sign in here</a>
+													</p>
+												</div>
 											</form>
+
 										</div>
 									</div>
 

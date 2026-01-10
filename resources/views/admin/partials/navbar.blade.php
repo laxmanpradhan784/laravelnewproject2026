@@ -640,8 +640,15 @@
 										class="bx bx-wallet"></i><span>Earnings</span></a>
 								<a class="dropdown-item" href="javascript:;"><i
 										class="bx bx-cloud-download"></i><span>Downloads</span></a>
-								<div class="dropdown-divider mb-0"></div>	<a class="dropdown-item" href="javascript:;"><i
-										class="bx bx-power-off"></i><span>Logout</span></a>
+								<div class="dropdown-divider mb-0"></div>	<a class="dropdown-item" href="#"
+								onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+									<i class="bx bx-power-off"></i>
+									<span>Logout</span>
+								</a>
+
+								<form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
+									@csrf
+								</form>
 							</div>
 						</li>
 						<li class="nav-item dropdown dropdown-language">

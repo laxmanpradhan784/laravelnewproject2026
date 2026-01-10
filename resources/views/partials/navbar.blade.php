@@ -1,4 +1,4 @@
- <!--[if lte IE 9]>
+    <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
     <a href="#top" class="back-to-top" id="backto-top"><i class="fal fa-arrow-up"></i></a>
@@ -41,7 +41,7 @@
                     <div class="col-sm-6">
                         <div class="header-top-link">
                             <ul class="quick-link">
-                                <li><a href="{{ url('/contact') }}">Help</a></li>
+                                 <li><a href="{{ url('/contact') }}">Help</a></li>
                                <li><a href="{{ url('/sign-up') }}">Join Us</a></li>
                                <li><a href="{{ url('/sign-in') }}">Sign In</a></li>
                             </ul>
@@ -51,9 +51,7 @@
             </div>
         </div>
 
-    </header>
-
-<!-- Start Mainmenu Area  -->
+ <!-- Start Mainmenu Area  -->
         <div id="axil-sticky-placeholder"></div>
         <div class="axil-mainmenu">
             <div class="container">
